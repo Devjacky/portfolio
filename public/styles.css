@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
+
+body {
+  font-family: Montserrat;
+}
+
+.btn {
+  @apply shadow-md py-3 px-6 rounded-md transition duration-300;
+}
+
+.btn-peach {
+  @apply bg-jack-peach text-jack-cream;
+}
+
+.btn-cream {
+  @apply bg-jack-cream;
+}
