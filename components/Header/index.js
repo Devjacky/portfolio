@@ -1,8 +1,32 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../public/devjacky-logo.png";
+import Dropdown from "./dropdown";
 import { BiMenu } from "react-icons/bi";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const hideMenu = () => {
+      // 640 is tw breakpoint
+      if (window.innerWidth >= 640 && isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", hideMenu);
+
+    return () => {
+      window.removeEventListener("resize", hideMenu);
+    };
+  });
+
   return (
     <header>
       <nav className="container flex items-center justify-around py-4 mt-4 sm:mt-12 ">
@@ -18,15 +42,22 @@ export default function Header() {
           </a>
         </div>
         <ul className="hidden sm:inline-flex flex-1 justify-end items-center gap-12 uppercase text-sm">
-          <li className="cursor-pointer">Home</li>
-          <li className="cursor-pointer ">About</li>
-          <li className="cursor-pointer ">Projects</li>
-          <li className="cursor-pointer ">Contact</li>
+          <Link href="/">
+            <li className="cursor-pointer ">About</li>
+          </Link>
+          <Link href="/projects">
+            <li className="cursor-pointer ">Projects</li>
+          </Link>
+          <Link href="/contact">
+            <li className="cursor-pointer ">Contact</li>
+          </Link>
         </ul>
-        <div className="flex sm:hidden flex-1 justify-end">
-          <BiMenu size="4rem" />
+        {/* Mobile Button */}
+        <div className="flex sm:hidden flex-1 justify-end items-center ">
+          <BiMenu size="4rem" onClick={toggle} className="cursor-pointer" />
         </div>
       </nav>
+      <Dropdown isOpen={isOpen} />
     </header>
   );
 }
