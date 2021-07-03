@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
 
 body {
@@ -14,4 +17,25 @@ body {
 
 .btn-cream {
   @apply bg-jack-cream;
+}
+
+/* .highlight {
+  @apply absolute top-[110%] left-0 h-[2px] w-full bg-jack-peach origin-right transform scale-x-0 duration-500;
+} */
+
+.highlight {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ef9273;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+
+.nav-item:hover span {
+  transform: scaleX(1);
+  transform-origin: left;
 }

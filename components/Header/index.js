@@ -43,18 +43,30 @@ export default function Header() {
         </div>
         <ul className="hidden sm:inline-flex flex-1 justify-end items-center gap-12 uppercase text-sm">
           <Link href="/">
-            <li className="cursor-pointer ">About</li>
+            <div className="nav-item">
+              <a className="cursor-pointer relative">
+                About<span className="highlight group-hover:active"></span>
+              </a>
+            </div>
           </Link>
           <Link href="/projects">
-            <li className="cursor-pointer ">Projects</li>
+            <div className="nav-item">
+              <a className="cursor-pointer relative">
+                Projects<span className="highlight group-hover:active"></span>
+              </a>
+            </div>
           </Link>
           <Link href="/contact">
-            <li className="cursor-pointer ">Contact</li>
+            <div className="nav-item">
+              <a className="cursor-pointer relative">
+                Contact<span className="highlight group-hover:active"></span>
+              </a>
+            </div>
           </Link>
         </ul>
         {/* Mobile Button */}
         <div className="flex sm:hidden flex-1 justify-end items-center ">
-          <BiMenu size="4rem" onClick={toggle} className="cursor-pointer" />
+          <BiMenu size="3.5rem" onClick={toggle} className="cursor-pointer" />
         </div>
       </nav>
       <Dropdown isOpen={isOpen} />
