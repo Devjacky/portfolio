@@ -1,37 +1,42 @@
-import Head from "next/head";
 import Image from "next/image";
+import { useRef } from "react";
 
 import Header from "../Header";
 import handsome from "../../public/handsome.jpg";
+import Bio from "./bio";
+
+import { BiDownArrow } from "react-icons/bi";
+
+import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
+  const bioRef = useRef(null);
+
   return (
-    <>
-      <Header />
-      <main className="relative">
-        <div className="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
+    <main>
+      <section className="relative container max-w-[1400px]">
+        <Header />
+        <div className="container flex flex-col-reverse lg:flex-row items-center gap-10 py-14 lg:py-28 ">
           {/* Introduction */}
           <div className="flex flex-1 flex-col lg:items-start">
             <h2 className="text-3xl md:text-4xl lg:text-5xl text-center lg:text-left mb-6">
-              Hello, I'm <span className="text-jack-peach">Jack</span>, a
-              Fullstack Developer
+              <span className="text-jack-peach">Jack</span>
             </h2>
             <p className="text-lg text-center lg:text-left mb-6">
-              I'm passionate about building robust web applications using the
-              latest technologies.
+              Fullstack Developer
             </p>
             {/* Buttons */}
             <div className="flex justify-center flex-wrap gap-6">
               <button className="btn btn-peach hover:bg-jack-cream hover:text-jack-charcoal">
                 View Resume
               </button>
-              <button className="btn btn-cream hover:bg-jack-peach hover:text-jack-cream">
-                Hire Me
+              <button className="btn btn-cream text-jack-charcoal hover:bg-jack-peach hover:text-jack-cream">
+                View Github <FaGithub className="inline-block ml-3" />
               </button>
             </div>
           </div>
           {/* Image */}
-          <div className="flex justify-center xl:justify-end flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
+          <div className="flex justify-center xl:justify-end flex-1 mb-2 md:mb-4 lg:mb-0 z-10">
             <Image
               src={handsome}
               width={250}
@@ -41,7 +46,19 @@ export default function Home() {
             />
           </div>
         </div>
-      </main>
-    </>
+        <div className="flex justify-center ">
+          <BiDownArrow
+            size="2.5rem"
+            className="cursor-pointer animate-bounce"
+            onClick={() => {
+              if (bioRef && bioRef.current) {
+                bioRef.current.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          />
+        </div>
+      </section>
+      <Bio bioRef={bioRef} />
+    </main>
   );
 }

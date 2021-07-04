@@ -15,6 +15,14 @@ body {
   @apply bg-jack-peach text-jack-cream;
 }
 
+.btn-coral {
+  @apply bg-jack-coral text-jack-cream;
+}
+
+.btn-scarlett {
+  @apply bg-jack-scarlett text-jack-cream;
+}
+
 .btn-cream {
   @apply bg-jack-cream;
 }
