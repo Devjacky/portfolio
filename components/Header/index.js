@@ -34,14 +34,14 @@ export default function Header() {
           <a href="/">
             <Image
               src={logo}
-              width={80}
-              height={50}
+              width={120}
+              height={90}
               alt="devjacky logo"
               className="mb-0"
             />
           </a>
         </div>
-        <ul className="hidden sm:inline-flex flex-1 justify-end items-center gap-12 uppercase text-sm">
+        <ul className="hidden sm:inline-flex flex-1 justify-end items-center gap-12 uppercase text-lg">
           <Link href="/">
             <div className="nav-item">
               <a className="cursor-pointer relative">
