@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative container max-w-[1400px]">
+      <section className="relative container max-w-[1400px] min-h-screen">
         <Header />
         <div className="container flex flex-col-reverse lg:flex-row items-center gap-10 py-14 lg:py-28 ">
           {/* Introduction */}
