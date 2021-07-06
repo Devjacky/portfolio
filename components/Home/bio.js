@@ -6,10 +6,10 @@ import pic2 from "../../public/pooping.jpg";
 
 export default function BioSection({ bioRef }) {
   return (
-    <section className="bg-jack-peach text-jack-cream ">
+    <section className="bg-jack-olive text-jack-cream ">
       <div
         ref={bioRef}
-        className="container flex flex-col-reverse lg:flex-row items-center gap-12 py-44 mt-14 lg:mt-28  max-w-[1200px]"
+        className="container flex flex-col-reverse lg:flex-row-reverse items-center gap-12 py-44 mt-14 lg:mt-28  max-w-[1200px]"
       >
         {/* Introduction */}
         <div className="container flex flex-1 flex-col lg:items-start lg:pl-10">
@@ -51,12 +51,12 @@ export default function BioSection({ bioRef }) {
           </div>
           {/* Buttons */}
           <div className="flex justify-center flex-wrap gap-6 mt-16">
-            <button className="btn btn-scarlett hover:bg-jack-cream hover:text-jack-charcoal">
+            <button className="btn btn-scarlett hover:bg-jack-highlight">
               <Link href="/projects">
                 <a> View Projects</a>
               </Link>
             </button>
-            <button className="btn btn-cream text-jack-charcoal hover:bg-jack-peach hover:text-jack-cream">
+            <button className="btn btn-cream text-jack-charcoal hover:bg-jack-highlight hover:text-jack-cream">
               Contact Me
             </button>
           </div>
