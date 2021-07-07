@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaBirthdayCake, FaMapMarkerAlt, FaFlask } from "react-icons/fa";
 import { BiBook, BiMailSend } from "react-icons/bi";
-import pic2 from "../../public/pooping.jpg";
+import pic2 from "../../public/pictures/second.jpg";
 
 export default function BioSection({ bioRef }) {
   return (
-    <section className="bg-jack-olive text-jack-cream ">
+    <section className="bg-jack-cream text-jack-charcoal  min-h-screen">
       <div
         ref={bioRef}
         className="container flex flex-col-reverse lg:flex-row-reverse items-center gap-12 py-44 mt-14 lg:mt-28  max-w-[1200px]"
@@ -19,15 +19,16 @@ export default function BioSection({ bioRef }) {
           <p className="text-md text-center lg:text-left mb-6">
             Hi! My name is Jack Park. I am a Web Developer, and I'm very
             passionate and dedicated to my work. I am interested in building
-            robust web applications using the latest technology.
+            robust web applications using the latest technologies.
           </p>
           {/* Basic information */}
           <div className="mb-6 flex flex-col self-center lg:self-start">
             <div className="flex items-center">
-              <FaBirthdayCake className="inline-block mr-3" />
-              <span className="pr-3 min-w-[100px]">Birthday:</span>
-              <span> 1996.09.23</span>
+              <BiMailSend className="inline-block mr-3" />
+              <span className="pr-3 min-w-[100px]">Mail:</span>
+              <span> jkhpark23@gmail.com</span>
             </div>
+
             <div className="flex items-center">
               <FaMapMarkerAlt className="inline-block mr-3" />
               <span className="pr-3 min-w-[100px]">Location:</span>
@@ -44,26 +45,26 @@ export default function BioSection({ bioRef }) {
               <span> Computer Science </span>
             </div>
             <div className="flex items-center">
-              <BiMailSend className="inline-block mr-3" />
-              <span className="pr-3 min-w-[100px]">Mail:</span>
-              <span> jkhpark23@gmail.com</span>
+              <FaBirthdayCake className="inline-block mr-3" />
+              <span className="pr-3 min-w-[100px]">Birthday:</span>
+              <span> 1996.09.23</span>
             </div>
           </div>
           {/* Buttons */}
           <div className="flex justify-center flex-wrap gap-6 mt-16">
-            <button className="btn btn-scarlett hover:bg-jack-highlight">
+            <button className="btn btn-peach  hover:bg-jack-highlight">
               <Link href="/projects">
                 <a> View Projects</a>
               </Link>
             </button>
-            <button className="btn btn-cream text-jack-charcoal hover:bg-jack-highlight hover:text-jack-cream">
+            <button className="btn btn-green hover:bg-jack-highlight ">
               Contact Me
             </button>
           </div>
         </div>
         {/* Image */}
-        <div className="flex justify-center xl:justify-end flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
-          <Image src={pic2} width={350} height={450} alt="handsome developer" />
+        <div className="flex justify-center  flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
+          <Image src={pic2} width={400} height={500} alt="handsome developer" />
         </div>
       </div>
     </section>
