@@ -1,11 +1,9 @@
 import Image from "next/image";
 import { useRef } from "react";
-
+import ReactTypingEffect from "react-typing-effect";
 import Header from "../Header";
-import handsome from "../../public/handsome.jpg";
+import mainpic from "../../public/pictures/main.jpg";
 import Bio from "./bio";
-
-import { BiDownArrow } from "react-icons/bi";
 
 import { FaGithub } from "react-icons/fa";
 
@@ -14,20 +12,26 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative container max-w-[1400px] min-h-screen">
+      <section className="relative container max-w-[1400px]  min-h-screen flex flex-col">
         <Header />
         <div className="container flex flex-col-reverse lg:flex-row items-center gap-10 py-14 lg:py-28 ">
           {/* Introduction */}
-          <div className="flex flex-1 flex-col lg:items-start">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-center lg:text-left mb-6">
-              <span className="text-jack-peach">Jack</span>
-            </h2>
-            <p className="text-lg text-center lg:text-left mb-6">
-              Fullstack Developer
-            </p>
+          <div className="flex flex-1 flex-col  text-center">
+            <ReactTypingEffect
+              text={["박관해", "Jack"]}
+              cursorRenderer={(cursor) => (
+                <h1 className="text-jack-cream">{cursor}</h1>
+              )}
+              typingDelay={200}
+              displayTextRenderer={(text) => {
+                return <h1>{text}</h1>;
+              }}
+              className="text-7xl text-jack-cream"
+            />
+            <h2 className="text-4xl text-center my-6">Fullstack Developer</h2>
             {/* Buttons */}
-            <div className="flex justify-center flex-wrap gap-6">
-              <button className="btn btn-peach hover:bg-jack-cream hover:text-jack-charcoal">
+            <div className="flex justify-center flex-wrap gap-6 mt-10">
+              <button className="btn btn-green hover:bg-jack-peach ">
                 View Resume
               </button>
               <button className="btn btn-cream text-jack-charcoal hover:bg-jack-peach hover:text-jack-cream">
@@ -36,9 +40,9 @@ export default function Home() {
             </div>
           </div>
           {/* Image */}
-          <div className="flex justify-center xl:justify-end flex-1 mb-2 md:mb-4 lg:mb-0 z-10">
+          <div className="flex justify-center flex-1 mb-2 md:mb-4 lg:mb-0 z-10">
             <Image
-              src={handsome}
+              src={mainpic}
               width={250}
               height={350}
               alt="handsome developer"
@@ -46,16 +50,21 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="flex justify-center ">
-          <BiDownArrow
-            size="2.5rem"
-            className="cursor-pointer animate-bounce"
-            onClick={() => {
-              if (bioRef && bioRef.current) {
-                bioRef.current.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          />
+
+        <div
+          className="absolute bottom-[50px] left-0 w-full z-10 hidden lg:block mobile:hidden "
+          onClick={() => {
+            if (bioRef && bioRef.current) {
+              bioRef.current.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          <div className="text-white text-md block max-w-[100px] text-center cursor-pointer m-auto">
+            <span className="underline ">Scroll Down</span>
+            <span className="border-2 border-solid block rounded-2xl m-auto mt-[10px] h-[26px] w-[20px] relative">
+              <span className="bg-white block rounded-2xl absolute top-[8px] left-[50%] h-[4px] w-[4px] transform -translate-x-1/2 animate-scroll"></span>
+            </span>
+          </div>
         </div>
       </section>
       <Bio bioRef={bioRef} />
