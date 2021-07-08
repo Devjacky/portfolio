@@ -8,7 +8,7 @@ import {
 } from "react-icons/si";
 import Header from "../Header";
 import Nest from "../../public/nestjs-icon.svg";
-import ksakorea from "../../public/ksakorea.png";
+
 import coming from "../../public/coming.jpg";
 import Image from "next/image";
 import ProjectCard from "./project-card";
@@ -17,7 +17,6 @@ export default function Projects() {
   return (
     <>
       <Header />
-
       <main className="relative">
         {/* Projects section */}
         <section className="bg-white text-jack-charcoal py-10 mt-10 lg:mt-20 ">

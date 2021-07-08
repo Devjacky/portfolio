@@ -1,4 +1,3 @@
-import ksakorea from "../../public/ksakorea.png";
 import Image from "next/image";
 import { FaGithub, FaNode } from "react-icons/fa";
 // import { SiJavascript, SiBootstrap, SiMongodb } from "react-icons/si";
