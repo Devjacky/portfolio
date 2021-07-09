@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaBirthdayCake, FaMapMarkerAlt, FaFlask } from "react-icons/fa";
 import { BiBook, BiMailSend } from "react-icons/bi";
-import pic2 from "../../public/pictures/second.jpg";
+import pic2 from "../../public/images/second.jpg";
 
 export default function BioSection({ bioRef }) {
   return (

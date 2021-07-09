@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Header from "../Header";
-import mainpic from "../../public/pictures/main.jpg";
+import mainpic from "../../public/images/main.jpg";
 import Bio from "./bio";
 
 import { FaGithub } from "react-icons/fa";
