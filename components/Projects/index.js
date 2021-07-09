@@ -13,13 +13,15 @@ import coming from "../../public/coming.jpg";
 import Image from "next/image";
 import ProjectCard from "./project-card";
 
-export default function Projects() {
+export default function Projects(props) {
+  const { projects } = props;
+
   return (
     <>
       <Header />
       <main className="relative">
         {/* Projects section */}
-        <section className="bg-white text-jack-charcoal py-10 mt-10 lg:mt-20 ">
+        <section className=" text-jack-charcoal py-10 mt-10 lg:mt-20 ">
           <div className="container flex flex-col-reverse lg:flex-row items-center gap-12 ">
             {/* Introduction */}
             <div className="flex flex-1 flex-col lg:items-start ">
@@ -27,9 +29,11 @@ export default function Projects() {
                 Recent Projects
               </h2>
               {/* cards */}
-
               <div className="container flex flex-col lg:flex-row flex-wrap justify-around gap-12">
-                <ProjectCard
+                {projects.map((project) => (
+                  <ProjectCard key={project.path} project={project} />
+                ))}
+                {/* <ProjectCard
                   name="KSA Korea"
                   icons={[
                     [SiNodeDotJs, "green"],
@@ -42,32 +46,7 @@ export default function Projects() {
                   img={coming}
                   isOpen={false}
                 />
-                <ProjectCard
-                  name="Crispy - Crispr Scraper"
-                  icons={[
-                    [SiNodeDotJs, "green"],
-                    [SiJavascript, "#fddc01"],
-                    [SiBootstrap, "indigo"],
-                    [SiMongodb, "green"],
-                  ]}
-                  description=" Social Marketing App designed to encourage recycling. Created using
-          Express, Node, MongoDB, deployed on Heroku."
-                  img={coming}
-                  isOpen={false}
-                />
-                <ProjectCard
-                  name="Date Night"
-                  icons={[
-                    [SiNodeDotJs, "green"],
-                    [SiJavascript, "#fddc01"],
-                    [SiBootstrap, "red"],
-                    [SiMongodb, "green"],
-                  ]}
-                  description="         Social Marketing App designed to encourage recycling. Created using
-          Express, Node, MongoDB, deployed on Heroku."
-                  img={coming}
-                  isOpen={true}
-                />
+                
                 <ProjectCard
                   name="Gnarly"
                   icons={[
@@ -106,7 +85,7 @@ export default function Projects() {
           Express, Node, MongoDB, deployed on Heroku."
                   img={coming}
                   isOpen={true}
-                />
+                /> */}
               </div>
             </div>
           </div>
