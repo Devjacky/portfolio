@@ -14,7 +14,6 @@ export default function Header() {
 
   useEffect(() => {
     const hideMenu = () => {
-      // 640 is tw breakpoint
       if (window.innerWidth >= 640 && isOpen) {
         setIsOpen(false);
       }
@@ -31,36 +30,30 @@ export default function Header() {
     <header>
       <nav className="container flex items-center justify-around py-4 mt-4 sm:mt-12 ">
         <div className="py-1">
-          <a href="/">
+          <Link href="/">
             <Image
               src={logo}
               width={120}
               height={90}
               alt="devjacky logo"
-              className="mb-0"
+              className="mb-0 cursor-pointer"
             />
-          </a>
+          </Link>
         </div>
         <ul className="hidden sm:inline-flex flex-1 justify-end items-center gap-12 uppercase text-lg">
           <Link href="/">
-            <div className="nav-item">
-              <a className="cursor-pointer relative">
-                About<span className="highlight group-hover:active"></span>
-              </a>
+            <div className="nav-item relative cursor-pointer">
+              About<span className="highlight group-hover:active"></span>
             </div>
           </Link>
           <Link href="/projects">
-            <div className="nav-item">
-              <a className="cursor-pointer relative">
-                Projects<span className="highlight group-hover:active"></span>
-              </a>
+            <div className="nav-item relative cursor-pointer">
+              Projects<span className="highlight group-hover:active"></span>
             </div>
           </Link>
           <Link href="/contact">
-            <div className="nav-item">
-              <a className="cursor-pointer relative">
-                Contact<span className="highlight group-hover:active"></span>
-              </a>
+            <div className="nav-item relative cursor-pointer">
+              Contact<span className="highlight group-hover:active"></span>
             </div>
           </Link>
         </ul>

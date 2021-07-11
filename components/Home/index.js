@@ -18,7 +18,7 @@ export default function Home() {
           {/* Introduction */}
           <div className="flex flex-1 flex-col  text-center">
             <ReactTypingEffect
-              text={["박관해", "Jack"]}
+              text={["박관해", "Jack Park"]}
               cursorRenderer={(cursor) => (
                 <h1 className="text-jack-cream">{cursor}</h1>
               )}
