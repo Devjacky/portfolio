@@ -47,9 +47,9 @@ export default function Home() {
           <div className="flex justify-center flex-1 mb-2 md:mb-4 lg:mb-0 z-10">
             <Image
               src={mainpic}
-              width={250}
+              width={350}
               height={350}
-              alt="handsome developer"
+              alt="Jack's face"
               className="rounded-full"
             />
           </div>

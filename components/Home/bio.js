@@ -66,7 +66,7 @@ export default function BioSection({ bioRef }) {
         </div>
         {/* Image */}
         <div className="flex justify-center  flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
-          <Image src={pic2} width={400} height={500} alt="handsome developer" />
+          <Image src={pic2} width={400} height={500} alt="second pic of Jack" />
         </div>
       </div>
     </section>
