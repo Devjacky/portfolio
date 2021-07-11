@@ -30,15 +30,13 @@ export default function Header() {
     <header>
       <nav className="container flex items-center justify-around py-4 mt-4 sm:mt-12 ">
         <div className="py-1">
-          <Link href="/">
-            <Image
-              src={logo}
-              width={120}
-              height={90}
-              alt="devjacky logo"
-              className="mb-0 cursor-pointer"
-            />
-          </Link>
+          <Image
+            src={logo}
+            width={120}
+            height={90}
+            alt="devjacky logo"
+            className="mb-0"
+          />
         </div>
         <ul className="hidden sm:inline-flex flex-1 justify-end items-center gap-12 uppercase text-lg">
           <Link href="/">
