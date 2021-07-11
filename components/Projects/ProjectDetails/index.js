@@ -8,32 +8,23 @@ export default function projectDetails(props) {
 
   // to be able to use nextjs Image from markdown
   const projectRenderers = {
-    // img(image) {
-    //   return (
-    //     <Image
-    //       src={`/images/projects/${project.slug}/${image.src}`}
-    //       alt={image.alt}
-    //       width={600}
-    //       height={300}
-    //     />
-    //   );
-    // },
     p(paragraph) {
       const { node } = paragraph;
-
       if (node.children[0].tagName === "img") {
         const image = node.children[0];
+        const imgSrc = `/images/projects/${project.slug}/${image.properties.src}`;
+
         return (
-          <div>
-            <Image
-              src={`/images/projects/${project.slug}/${image.properties.src}`}
-              alt={image.alt}
-              width={600}
-              height={300}
-            />
+          <div className="self-center">
+            <Image src={imgSrc} alt={image.alt} width={640} height={420} />
           </div>
         );
       }
+      return (
+        <p className="mt-3 mb-6 text-lg text-center box-border px-6">
+          {paragraph.children}
+        </p>
+      );
     },
   };
 
@@ -41,12 +32,12 @@ export default function projectDetails(props) {
     <section className="relative container max-w-[1400px]  min-h-screen flex flex-col">
       <Header />
       <div className="container max-w-[920px]">
-        <div className="w-full">PlaceHolder Carousel Component</div>
-        <h3>{project.title}</h3> <h4>Project Date</h4>
-        <div>Tags Div</div>
+        <h1 className="text-3xl font-semibold mb-6 text-center">
+          {project.title}
+        </h1>
         <div>
-          <article>
-            <ReactMarkdown renderers={projectRenderers}>
+          <article className="flex flex-col ">
+            <ReactMarkdown components={projectRenderers}>
               {project.content}
             </ReactMarkdown>
           </article>

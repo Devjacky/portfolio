@@ -25,67 +25,14 @@ export default function Projects(props) {
           <div className="container flex flex-col-reverse lg:flex-row items-center gap-12 ">
             {/* Introduction */}
             <div className="flex flex-1 flex-col lg:items-start ">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl text-center lg:text-left mb-6">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl text-center lg:text-left mb-10">
                 Recent Projects
               </h2>
               {/* cards */}
               <div className="container flex flex-col lg:flex-row flex-wrap justify-around gap-12">
                 {projects.map((project) => (
-                  <ProjectCard key={project.path} project={project} />
+                  <ProjectCard key={project.slug} project={project} />
                 ))}
-                {/* <ProjectCard
-                  name="KSA Korea"
-                  icons={[
-                    [SiNodeDotJs, "green"],
-                    [SiJavascript, "#fddc01"],
-                    [SiBootstrap, "indigo"],
-                    [SiMongodb, "green"],
-                  ]}
-                  description=" Social Marketing App designed to encourage recycling. Created using
-          Express, Node, MongoDB, deployed on Heroku."
-                  img={coming}
-                  isOpen={false}
-                />
-                
-                <ProjectCard
-                  name="Gnarly"
-                  icons={[
-                    [SiNodeDotJs, "green"],
-                    [SiJavascript, "#fddc01"],
-                    [SiBootstrap, "indigo"],
-                    [SiMongodb, "green"],
-                  ]}
-                  description="         Social Marketing App designed to encourage recycling. Created using
-          Express, Node, MongoDB, deployed on Heroku."
-                  img={coming}
-                  isOpen={false}
-                />
-                <ProjectCard
-                  name="Portfolio"
-                  icons={[
-                    [SiNodeDotJs, "green"],
-                    [SiJavascript, "#fddc01"],
-                    [SiBootstrap, "indigo"],
-                    [SiMongodb, "green"],
-                  ]}
-                  description="         Social Marketing App designed to encourage recycling. Created using
-          Express, Node, MongoDB, deployed on Heroku."
-                  img={coming}
-                  isOpen={true}
-                />
-                <ProjectCard
-                  name="Reddit Short Videos"
-                  icons={[
-                    [SiNodeDotJs, "green"],
-                    [SiJavascript, "#fddc01"],
-                    [SiBootstrap, "indigo"],
-                    [SiMongodb, "green"],
-                  ]}
-                  description="         Social Marketing App designed to encourage recycling. Created using
-          Express, Node, MongoDB, deployed on Heroku."
-                  img={coming}
-                  isOpen={true}
-                /> */}
               </div>
             </div>
           </div>
