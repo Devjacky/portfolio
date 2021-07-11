@@ -16,11 +16,11 @@ export default function Contact() {
           </p>
 
           <div className="flex justify-center flex-wrap gap-6 mt-10">
-            <Link href="mailto:jkhpark23@gmail.com">
+            <a href="mailto:jkhpark23@gmail.com">
               <button className="btn btn-green hover:bg-jack-peach ">
                 Mail me!
               </button>
-            </Link>
+            </a>
             <Link href="https://github.com/Devjacky">
               <button className="btn btn-cream text-jack-charcoal hover:bg-jack-peach hover:text-jack-cream">
                 View Github <FaGithub className="inline-block ml-3" />

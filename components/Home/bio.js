@@ -52,14 +52,16 @@ export default function BioSection({ bioRef }) {
           </div>
           {/* Buttons */}
           <div className="flex justify-center flex-wrap gap-6 mt-16">
-            <button className="btn btn-peach  hover:bg-jack-highlight">
-              <Link href="/projects">
-                <a> View Projects</a>
-              </Link>
-            </button>
-            <button className="btn btn-green hover:bg-jack-highlight ">
-              Contact Me
-            </button>
+            <Link href="/projects">
+              <button className="btn btn-peach  hover:bg-jack-highlight">
+                View Projects
+              </button>
+            </Link>
+            <a href="mailto:jkhpark23@gmail.com">
+              <button className="btn btn-green hover:bg-jack-highlight ">
+                Contact Me
+              </button>
+            </a>
           </div>
         </div>
         {/* Image */}
