@@ -41,34 +41,6 @@ body {
   transform-origin: left;
 }
 
-.dynamic-name li span {
-  position: relative;
-}
-
-.dynamic-name li {
-  color: #a3bcb6;
-  font-size: 60px;
-  font-weight: 500;
-}
-
-.dynamic-name li span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #000;
-  border-left: 2px solid #a3bcb6;
-  animation: typing 1.5s steps(9) infinite;
-}
-
-@keyframes typing {
-  100% {
-    left: 100%;
-    margin: 0 -35px 0 35px;
-  }
-}
-
 .preview {
   transition-property: all;
   transition-duration: 0.3s;

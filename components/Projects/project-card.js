@@ -1,11 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { BiLinkExternal } from "react-icons/bi";
 
 export default function ProjectCard(props) {
   const { title, image, description, url, source, slug } = props.project;
-  const linkPath = `/projects/${slug}`;
+
   const imgPath = `/images/projects/${slug}/${image}`;
 
   return (

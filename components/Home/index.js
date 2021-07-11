@@ -18,7 +18,7 @@ export default function Home() {
           {/* Introduction */}
           <div className="flex flex-1 flex-col  text-center">
             <ReactTypingEffect
-              text={["박관해", "Jack"]}
+              text={["박관해", "Jack Park"]}
               cursorRenderer={(cursor) => (
                 <h1 className="text-jack-cream">{cursor}</h1>
               )}
@@ -28,15 +28,19 @@ export default function Home() {
               }}
               className="text-7xl text-jack-cream"
             />
-            <h2 className="text-4xl text-center my-6">Fullstack Developer</h2>
+            <h2 className="text-3xl text-center my-6">Fullstack Developer</h2>
             {/* Buttons */}
             <div className="flex justify-center flex-wrap gap-6 mt-10">
-              <button className="btn btn-green hover:bg-jack-peach ">
-                View Resume
-              </button>
-              <button className="btn btn-cream text-jack-charcoal hover:bg-jack-peach hover:text-jack-cream">
-                View Github <FaGithub className="inline-block ml-3" />
-              </button>
+              <a href="/resume.pdf" target="_blank">
+                <button className="btn btn-green hover:bg-jack-peach ">
+                  View Resume
+                </button>
+              </a>
+              <a href="https://github.com/Devjacky" target="_blank">
+                <button className="btn btn-cream text-jack-charcoal hover:bg-jack-peach hover:text-jack-cream">
+                  View Github <FaGithub className="inline-block ml-3" />
+                </button>
+              </a>
             </div>
           </div>
           {/* Image */}
@@ -59,10 +63,10 @@ export default function Home() {
             }
           }}
         >
-          <div className="text-white text-md block max-w-[100px] text-center cursor-pointer m-auto">
-            <span className="underline ">Scroll Down</span>
-            <span className="border-2 border-solid block rounded-2xl m-auto mt-[10px] h-[26px] w-[20px] relative">
-              <span className="bg-white block rounded-2xl absolute top-[8px] left-[50%] h-[4px] w-[4px] transform -translate-x-1/2 animate-scroll"></span>
+          <div className="text-white text-lg block max-w-[200px] text-center cursor-pointer m-auto">
+            <span className="underline">Scroll Down</span>
+            <span className="border-2 border-solid block rounded-2xl m-auto mt-[10px] h-[36px] w-[28px] relative">
+              <span className="bg-white block rounded-2xl absolute top-[8px] left-[50%] h-[6px] w-[6px] transform -translate-x-1/2 animate-scroll"></span>
             </span>
           </div>
         </div>

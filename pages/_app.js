@@ -1,6 +1,7 @@
 import "tailwindcss/tailwind.css";
 import "../public/styles.css";
 import { useState, useEffect } from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Loader from "../components/Loader";
 
@@ -24,7 +25,19 @@ function MyApp({ Component, pageProps }) {
     };
   }, []);
 
-  return pageLoading ? <Loader /> : <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <title>Jack Park</title>
+        <meta
+          name="description"
+          content="Portfolio website for Jack / Kwan Hai Park"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      ;{pageLoading ? <Loader /> : <Component {...pageProps} />}
+    </>
+  );
 }
 
 export default MyApp;
