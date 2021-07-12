@@ -32,8 +32,8 @@ export default function Header() {
         <div className="py-1">
           <Image
             src={logo}
-            width={120}
-            height={90}
+            width={128}
+            height={89}
             alt="devjacky logo"
             className="mb-0"
           />

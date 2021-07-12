@@ -21,11 +21,15 @@ export default function Contact() {
                 Mail me!
               </button>
             </a>
-            <Link href="https://github.com/Devjacky">
+            <a
+              href="https://github.com/Devjacky"
+              target="_blank"
+              rel="noopener"
+            >
               <button className="btn btn-cream text-jack-charcoal hover:bg-jack-peach hover:text-jack-cream">
                 View Github <FaGithub className="inline-block ml-3" />
               </button>
-            </Link>
+            </a>
           </div>
         </section>
       </main>
