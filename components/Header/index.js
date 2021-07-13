@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="container flex items-center justify-around py-4 mt-4 sm:mt-12 ">
+      <nav className="container max-w-[1400px] flex items-center justify-around pb-4 mt-4 ">
         <div className="py-1">
           <Image
             src={logo}

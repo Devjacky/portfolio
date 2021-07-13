@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      ;{pageLoading ? <Loader /> : <Component {...pageProps} />}
+      {pageLoading ? <Loader /> : <Component {...pageProps} />}
     </>
   );
 }

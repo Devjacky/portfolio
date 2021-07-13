@@ -11,9 +11,10 @@ export default function Home() {
   const bioRef = useRef(null);
 
   return (
+    <>
+    <Header />
     <main>
-      <section className="relative container max-w-[1400px]  min-h-screen flex flex-col">
-        <Header />
+      <section className="relative container max-w-[1400px]  h-full flex flex-col">
         <div className="container flex flex-col-reverse lg:flex-row items-center gap-10 py-14 lg:py-28 ">
           {/* Introduction */}
           <div className="flex flex-1 flex-col  text-center">
@@ -60,14 +61,14 @@ export default function Home() {
         </div>
 
         <div
-          className="absolute bottom-[50px] left-0 w-full z-10 hidden lg:block mobile:hidden "
+          className="absolute bottom-0 left-0 w-full z-10 hidden lg:block mobile:hidden "
           onClick={() => {
             if (bioRef && bioRef.current) {
               bioRef.current.scrollIntoView({ behavior: "smooth" });
             }
           }}
         >
-          <div className="text-white text-lg block max-w-[200px] text-center cursor-pointer m-auto">
+          <div className="text-white text-lg block max-w-[200px] text-center cursor-pointer mx-auto">
             <span className="underline">Scroll Down</span>
             <span className="border-2 border-solid block rounded-2xl m-auto mt-[10px] h-[36px] w-[28px] relative">
               <span className="bg-white block rounded-2xl absolute top-[8px] left-[50%] h-[6px] w-[6px] transform -translate-x-1/2 animate-scroll"></span>
@@ -77,5 +78,6 @@ export default function Home() {
       </section>
       <Bio bioRef={bioRef} />
     </main>
+    </>
   );
 }

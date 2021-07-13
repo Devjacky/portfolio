@@ -1,13 +1,12 @@
 import { FaGithub } from "react-icons/fa";
-import Link from "next/link";
 import Header from "../Header";
 
 export default function Contact() {
   return (
     <>
       <Header />
-      <main className="relative">
-        <section className="container  py-10 mt-10 lg:mt-20 ">
+      <section className="relative">
+        <div className="container max-w-[1400px] py-10 mt-10 lg:mt-20 ">
           <h1 className="text-3xl mb-10">Contact Me</h1>
 
           <p className="text-lg">
@@ -31,8 +30,8 @@ export default function Contact() {
               </button>
             </a>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
     </>
   );
 }

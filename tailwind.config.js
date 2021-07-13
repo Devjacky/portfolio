@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        mobile: { raw: "(max-height:768px)" },
+        mobile: { raw: "(max-height:700px)" },
       },
       animation: {
         scroll: "scroll 2s linear infinite",

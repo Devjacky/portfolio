@@ -6,7 +6,7 @@ import pic2 from "../../public/images/second.jpg";
 
 export default function BioSection({ bioRef }) {
   return (
-    <section className="bg-jack-cream text-jack-charcoal  min-h-screen">
+    <section className="bg-jack-cream text-jack-charcoal  min-h-full">
       <div
         ref={bioRef}
         className="container flex flex-col-reverse lg:flex-row-reverse items-center gap-12 py-44 mt-14 lg:mt-28  max-w-[1200px]"
