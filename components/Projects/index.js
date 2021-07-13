@@ -8,7 +8,7 @@ export default function Projects(props) {
   return (
     <>
       <Header />
-      <section className="relative max-w-[1600px]">
+      <section className="relative max-w-[1400px] mx-auto">
         <div className=" text-jack-charcoal py-10 mt-10 lg:mt-20 ">
           <div className="container flex flex-col-reverse lg:flex-row items-center gap-12 ">
             <div className="flex flex-1 flex-col lg:items-start ">
@@ -16,7 +16,7 @@ export default function Projects(props) {
                 Recent Projects
               </h2>
 
-              <div className="container flex flex-col lg:flex-row flex-wrap justify-around gap-12">
+              <div className="container flex flex-col lg:flex-row flex-wrap justify-around gap-8">
                 {projects.map((project) => (
                   <ProjectCard key={project.slug} project={project} />
                 ))}
